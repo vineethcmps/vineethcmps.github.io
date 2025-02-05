@@ -1,73 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vineeth Chinmaya Murthy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vineeth Chinmaya Murthy</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2d3748;
+      --accent: #4299e1;
+      --background: #f7fafc;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: var(--background);
+      color: var(--primary);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 3rem 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .nested-list {
+      padding-left: 2rem;
+      margin-top: 0.5rem;
+    }
+
+    .experience-item {
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #666;
+      font-size: 0.875rem;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1rem;
+      }
+
+      header {
+        padding: 2rem 1rem;
+      }
+
+      section {
+        padding: 1.5rem;
+      }
+
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
     <header>
-        <h1>Vineeth Chinmaya Murthy</h1>
-        <p>Bengaluru, Karnataka, India | vineethcmps@gmail.com</p>
+      <div class="profile-section">
+        <img
+          src="https://media.licdn.com/dms/image/v2/C5603AQGpnUXZLegtWQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1659210151835?e=1744243200&v=beta&t=ejId8UzYRxGvnNhsETc8rEH_ZaHJzI_-l8Nj5uxg9is"
+          alt="Vineeth Chinmaya Murthy" class="profile-photo">
+        <div>
+          <h1>Vineeth Chinmaya Murthy</h1>
+          <p>Bengaluru, Karnataka, India | <a href="mailto:vineethcmps@gmail.com">vineethcmps@gmail.com</a></p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/vineethcmps" target="_blank">
+              <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>Highly motivated and experienced AI/ML professional with a proven track record of success in developing and implementing cutting-edge AI solutions.</p>
-        </section>
+      <section id="summary">
+        <h2>Summary</h2>
+        <p>Highly motivated and experienced AI/ML professional with a proven track record of success in developing and
+          implementing cutting-edge AI solutions. Expertise in various AI/ML frameworks and tools, including TensorFlow,
+          PyTorch, and Langchain. Proficient in Python and C++. Strong understanding of computer vision and deep
+          learning. Passionate about building AI systems that solve real-world problems.</p>
+      </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: Python, C++</li>
-                <li>AI/ML Frameworks: TensorFlow, PyTorch, Langchain</li>
-                <li>Deep Learning: CNNs, RNNs, Transformers</li>
-                <li>Computer Vision: Object detection, image classification, image segmentation</li>
-                <li>LLMs: GPT-4, GPT-4o</li>
-                <li>Model Development: Model optimization, fine-tuning and evaluation</li>
-                <li>Vulnerability Remediation: CVE analysis, Security fixes</li>
-                <li>Tools: Git, Jira, Weaviate, OpenCV, OpenCL, OpenGL</li>
-            </ul>
-        </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <ul>
+            <li>Programming Languages: Python, C++</li>
+            <li>AI/ML Frameworks: TensorFlow, PyTorch, Langchain</li>
+            <li>Deep Learning: CNNs, RNNs, Transformers</li>
+            <li>Computer Vision: Object detection, image classification, image segmentation</li>
+          </ul>
+          <ul>
+            <li>LLMs: GPT-4, GPT-4o</li>
+            <li>Model Development: Model optimization, fine-tuning and evaluation</li>
+            <li>Vulnerability Remediation: CVE analysis, Security fixes</li>
+            <li>Tools: Git, Jira, Weaviate, OpenCV, OpenCL, OpenGL</li>
+          </ul>
+        </div>
+      </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div>
-                <h3>Model Development Engineer | Instabase | Bengaluru, Karnataka, India | 2020 - Present</h3>
-                <ul>
-                    <li>LLM Development & Optimization</li>
-                    <li>Vulnerability Remediation & System Upgrades</li>
-                    <li>General Model Improvements</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Data Scientist | ShareChat | Bengaluru, Karnataka, India | 2019 - 2020</h3>
-                <ul>
-                    <li>Visual Effects Development</li>
-                    <li>Content Moderation</li>
-                </ul>
-            </div>
-            </div>
-        </section>
+      <section id="experience">
+        <h2>Experience</h2>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p>B.E. (Honors) in Electronics and Communication Engineering (ECE) R. V. College of
-            Engineering, Bangalore | 2017</p>
-        </section>
+        <div class="experience-item">
+          <h3>Model Development Engineer | Instabase | Bengaluru, Karnataka, India | 2020 - Present</h3>
+          <ul>
+            <li>LLM Development & Optimization:
+              <ul class="nested-list">
+                <li>Architected and productionized the first version of RAG based document understanding platform -
+                  <a href="https://aihub.instabase.com"> <i><b> AIhub Instabase </b></i> </a>
+                </li>
+                <li>Developed and implemented a new chunk-based retrieval approach for answering questions directly,
+                  resulting in a 0.66875 score on local tests</li>
+                <li>Designed and implemented a system for handling out-of-context questions in a multistep system prompt
+                </li>
+                <li>Optimized the performance of the MS lite model by reducing Weaviate calls for chunk to page mapping
+                </li>
+              </ul>
+            </li>
+            <li>Vulnerability Remediation & System Upgrades:
+              <ul class="nested-list">
+                <li>Remediated vulnerabilities in the Langchain library</li>
+                <li>Upgraded the OpenAI and Langchain libraries to the latest versions</li>
+              </ul>
+            </li>
+            <li>General Model Improvements:
+              <ul class="nested-list">
+                <li>Fixed various bugs and issues in AI models and systems, enhancing their stability and reliability
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
 
-        <section id="awards">
-            <h2>Awards and Recognition</h2>
-            <ul>
-                <li>IBHack winner 2023 (Instabase)</li>
-                <li>Think tank winner 2025 (Instabase)</li>
-            </ul>
-        </section>
+        <div class="experience-item">
+          <h3>Data Scientist | ShareChat | Bengaluru, Karnataka, India | 2019 - 2020</h3>
+          <ul>
+            <li>Visual Effects Development:
+              <ul class="nested-list">
+                <li>Worked on creating visual effects based on audio cues, using neural networks for audio source
+                  separation and OpenGL for effects</li>
+                <li>Implemented visual effects on Android platform</li>
+              </ul>
+            </li>
+            <li>Content Moderation:
+              <ul class="nested-list">
+                <li>Contributed to NSFW/SFW media classification using multimodal neural networks</li>
+                <li>Involved in data cleaning, model training, and deploying on Kubernetes</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Senior Engineer | Ittiam Systems | Bengaluru, Karnataka, India | 2019</h3>
+          <ul>
+            <li>Computer Vision Applications:
+              <ul class="nested-list">
+                <li>Contributed to person/face detection using single-shot neural networks</li>
+                <li>Contributed to improvements in person tracking using deep learning based feature matching</li>
+              </ul>
+            </li>
+            <li>Edge Computing & Tooling:
+              <ul class="nested-list">
+                <li>Explored new edge hardware infrastructures for neural network inference</li>
+                <li>Helped to create mask annotation tools using state of the art methods like DEXTR and SiamMask</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Engineer | Ittiam Systems | Bengaluru, Karnataka, India | 2017 - 2019</h3>
+          <ul>
+            <li>Algorithm Optimization:
+              <ul class="nested-list">
+                <li>Involved in improvements to optical flow/background modelling both in terms of accuracy and time
+                  performance</li>
+              </ul>
+            </li>
+            <li>GPU Programming:
+              <ul class="nested-list">
+                <li>Implemented OpenCL GPU kernel for distortion correction</li>
+              </ul>
+            </li>
+            <li>Software Architecture:
+              <ul class="nested-list">
+                <li>Coded a new algorithm pipeline architecture based on JobQueue design which resulted in a significant
+                  speedup of the algorithm</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p>B.E. (Honors) in Electronics and Communication Engineering (ECE)<br>
+          R. V. College of Engineering, Bangalore | 2017</p>
+      </section>
+
+      <section id="awards">
+        <h2>Awards and Recognition</h2>
+        <ul>
+          <li>IBHack winner 2023 (Instabase)</li>
+          <li> <a
+              href="https://www.linkedin.com/posts/vineethcmps_last-week-we-had-an-amazing-offsite-arranged-activity-7286105535576264704-Y055?utm_source=share&utm_medium=member_desktop">
+              Think tank winner 2025 (Instabase) </a> </li>
+        </ul>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Vineeth Chinmaya Murthy</p>
+      <p>&copy; 2025 Vineeth Chinmaya Murthy</p>
     </footer>
+  </div>
 </body>
+
 </html>
